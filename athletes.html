@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Athletes | MySmithFile</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.search-box{
+text-align:center;
+margin:40px 0;
+}
+
+.search-box input{
+width:300px;
+padding:12px;
+font-size:16px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.athlete-grid{
+
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+
+padding-bottom:50px;
+
+}
+
+.athlete-card{
+
+width:250px;
+
+background:white;
+
+border-radius:12px;
+
+box-shadow:0px 5px 15px rgba(0,0,0,.2);
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.athlete-card img{
+
+width:120px;
+height:120px;
+
+object-fit:cover;
+
+border-radius:100px;
+
+margin-bottom:10px;
+
+}
+
+.view-btn{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:10px 18px;
+
+background:#0a1f44;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:6px;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HEADER -->
+
+<div class="top-banner">
+
+<a href="index.html">
+<img src="smithfile-logo.png" class="logo">
+</a>
+
+<h1>MySmithFile</h1>
+
+</div>
+
+
+
+<nav class="menu">
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="athletes.html">Athletes</a></li>
+
+<li><a href="#">How It Works</a></li>
+
+<li><a href="#">Pricing</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<h2>Search Athletes</h2>
+
+<input type="text" id="searchInput" placeholder="Search name or position...">
+
+</div>
+
+
+
+<!-- ATHLETES -->
+
+<div class="athlete-grid" id="athleteGrid">
+
+
+<div class="athlete-card" data-name="Tyler Smith" data-sport="Wide Receiver">
+
+<img src="tyler/IMG_20260223_201745.jpg">
+
+<h3>Tyler Smith</h3>
+
+<p>
+
+Wide Receiver<br>
+Class of 2030
+
+</p>
+
+<a href="tyler/" class="view-btn">
+
+View Profile
+
+</a>
+
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".athlete-card");
+
+searchInput.addEventListener("keyup", function(){
+
+let value = searchInput.value.toLowerCase();
+
+cards.forEach(card => {
+
+let name = card.dataset.name.toLowerCase();
+let sport = card.dataset.sport.toLowerCase();
+
+if(name.includes(value) || sport.includes(value))
+card.style.display="block";
+else
+card.style.display="none";
+
+});
+
+});
+
+</script>
+
+
+
+<footer>
+
+© MySmithFile  
+One Link. Full Profile.
+
+</footer>
+
+
+
+</body>
+
+</html>
