@@ -319,3 +319,52 @@ color:silver;
 font-size:14px;
 color:gray;
 }
+.packages {
+text-align:center;
+padding:60px 20px;
+background:#0b1f3a;
+color:white;
+}
+
+.dogtag-container{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.dogtag{
+width:260px;
+height:420px;
+background:linear-gradient(#e6e6e6,#cfcfcf);
+border-radius:40px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+padding:30px;
+color:#0b1f3a;
+font-weight:600;
+position:relative;
+}
+
+.dogtag:before{
+content:'';
+width:20px;
+height:20px;
+background:#0b1f3a;
+border-radius:50%;
+position:absolute;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.dogtag h3{
+margin-top:40px;
+font-size:22px;
+}
+
+.price{
+font-size:32px;
+margin-top:20px;
+font-weight:bold;
+}
