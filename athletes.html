@@ -90,7 +90,22 @@ font-weight:bold;
 </head>
 
 
+<script>
+document.querySelectorAll('.dropbtn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const dropdown = this.parentElement;
+        dropdown.classList.toggle('active');
+    });
+});
 
+document.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
+});
+</script>
+    
 <body>
 
 
