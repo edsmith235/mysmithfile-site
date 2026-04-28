@@ -91,17 +91,15 @@ font-weight:bold;
 
 
 <script>
-document.querySelectorAll('.dropbtn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const dropdown = this.parentElement;
-        dropdown.classList.toggle('active');
-    });
-});
+const searchInput = document.getElementById('searchInput');
 
-document.addEventListener('click', function() {
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-        dropdown.classList.remove('active');
+searchInput.addEventListener('input', function() {
+    const value = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.athlete-card');
+
+    cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(value) ? 'block' : 'none';
     });
 });
 </script>
