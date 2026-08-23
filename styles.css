@@ -490,3 +490,107 @@ color:black;
 }
 
 }
+/* =========================
+   ATHLETE PROFILE FIXES
+========================= */
+
+.save-profile {
+  text-align: center;
+}
+
+.profile-save-button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: var(--navy-blue);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-save-button:hover {
+  background: var(--navy-blue-dark);
+}
+
+.copy-status {
+  min-height: 24px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy-blue);
+}
+
+
+/* Recruiting links - desktop */
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 14px;
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  background: var(--navy-blue);
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* Mobile athlete profile */
+
+@media (max-width: 768px) {
+
+  img.profile-pic {
+    width: 110px !important;
+    height: 135px !important;
+    max-width: 110px !important;
+    max-height: 135px !important;
+    object-fit: cover !important;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .profile-header {
+    padding: 10px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.7rem;
+    margin: 8px 0 4px;
+  }
+
+  .profile-header h2 {
+    font-size: 1rem;
+    margin: 4px 0;
+  }
+
+  .profile-header .location {
+    font-size: 0.85rem;
+    margin: 5px 0;
+  }
+
+  .social-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .social-links a {
+    min-width: 0;
+    width: auto;
+    padding: 12px 8px;
+    font-size: 0.88rem;
+  }
+}
