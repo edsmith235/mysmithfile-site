@@ -636,3 +636,75 @@ color:black;
     font-size: 0.88rem;
   }
 }
+/* =========================
+   ATHLETE DROPDOWN
+========================= */
+
+.dropdown {
+    position: relative;
+}
+
+
+.dropdown-content {
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    background:#0a1f44;
+
+    min-width:220px;
+
+    border-radius:8px;
+
+    padding:0;
+
+    margin:0;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+    z-index:999;
+
+}
+
+
+.dropdown-content li {
+
+    list-style:none;
+
+}
+
+
+.dropdown-content a {
+
+    display:block;
+
+    padding:15px;
+
+    color:white;
+
+    text-align:left;
+
+}
+
+
+.dropdown-content a:hover {
+
+    background:#c0c0c0;
+
+    color:#0a1f44;
+
+}
+
+
+/* Show menu */
+
+.dropdown:hover .dropdown-content {
+
+    display:block;
+
+}
